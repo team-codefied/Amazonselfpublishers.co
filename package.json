@@ -1,0 +1,10 @@
+{
+  "name": "amazonselfpublishers",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static site in site/ plus Vercel serverless form endpoints in api/",
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "nodemailer": "^6.9.16"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": null,
+  "installCommand": "npm install --omit=dev",
+  "outputDirectory": "site",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/book-publishing-services", "destination": "/publishing-services", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/backend/token.php", "destination": "/api/token" },
+    { "source": "/backend/contact.php", "destination": "/api/contact" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" },
+        { "key": "Strict-Transport-Security", "value": "max-age=31536000; includeSubDomains" },
+        { "key": "Content-Security-Policy", "value": "default-src 'self'; img-src 'self' data: https://*.livechatinc.com https://*.livechat.com https://*.livechat-files.com; style-src 'self' https://fonts.googleapis.com https://*.livechatinc.com 'unsafe-inline'; font-src 'self' data: https://fonts.gstatic.com https://*.livechatinc.com; script-src 'self' 'unsafe-inline' https://*.livechatinc.com https://*.livechat.com; connect-src 'self' https://*.livechatinc.com https://*.livechat.com wss://*.livechatinc.com wss://*.livechat.com; frame-src https://*.livechatinc.com https://*.livechat.com; media-src https://*.livechatinc.com https://*.livechat-files.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self'" }
+      ]
+    },
+    {
+      "source": "/assets/img/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+    }
+  ]
+}

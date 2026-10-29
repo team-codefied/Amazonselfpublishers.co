@@ -1,0 +1,31 @@
+DATA
+From: amazonselfpublishers website <s@test.local>
+To: o@test.local
+Reply-To: Test User <a@b.co>
+Subject: New inquiry: Book Cover Design (Test User)
+Message-ID: <e5bdf3f1-727b-be5a-d863-f05f123e8aae@test.local>
+Content-Transfer-Encoding: 7bit
+Date: Thu, 29 Oct 2026 14:46:00 +0000
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+New website inquiry
+----------------------------------------
+Name: Test User
+Email: a@b.co
+Phone: +1 323 509 3062
+Service: Book Cover Design
+Book title: -
+Manuscript status: -
+
+Message:
+hi
+
+----------------------------------------
+Privacy and terms acknowledged: ticked
+Form: 
+Page: 
+Received: 2026-10-29T14:46:00.091Z
+.
+
+=====

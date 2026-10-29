@@ -1,0 +1,6 @@
+tools
+_backup_original_assets
+site/backend
+*.zip
+*.md
+Amazon SelfPublishers Logo.png

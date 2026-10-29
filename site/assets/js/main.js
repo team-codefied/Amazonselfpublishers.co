@@ -114,7 +114,7 @@
       fillHidden(form);
       getToken().then(function (t) {
         form.elements.csrf_token.value = t.token; form.elements.form_ts.value = t.ts;
-        return fetch(form.action, { method: 'POST', body: new FormData(form), credentials: 'same-origin', headers: { 'Accept': 'application/json' } });
+        return fetch(form.action, { method: 'POST', body: new URLSearchParams(new FormData(form)), credentials: 'same-origin', headers: { 'Accept': 'application/json' } });
       }).then(function (r) { return r.json().catch(function () { return { ok: false, message: 'Unexpected server response.' }; }).then(function (j) { j.status = r.status; return j; }); })
         .then(function (j) {
           if (j.ok) {

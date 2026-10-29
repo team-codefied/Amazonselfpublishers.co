@@ -1,0 +1,5 @@
+node_modules/
+tools/node_modules/
+site/backend/.env
+site/backend/storage/*
+!site/backend/storage/.htaccess

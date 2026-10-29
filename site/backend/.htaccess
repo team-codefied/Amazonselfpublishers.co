@@ -1,0 +1,5 @@
+# Block web access to secrets, helpers and storage. Only contact.php and token.php are public.
+<FilesMatch "^(\.env.*|lib\.php|services\.json|.*\.key|.*\.md)$">
+  Require all denied
+</FilesMatch>
+Options -Indexes

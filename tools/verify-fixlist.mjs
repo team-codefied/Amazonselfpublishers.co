@@ -57,7 +57,7 @@ const LP = page('/publishing-services');
   const labels = [...f.matchAll(/<label for="[^"]*">([\s\S]*?)<\/label>/g)].map((m) => txt(m[1]));
   check('LP.8', 'form fields: Full Name*, Email*, Phone*, Service Needed (optional), Project Details (optional), consent*', ['Full Name *', 'Email *', 'Phone *', 'Service Needed (optional)', 'Project Details (optional)'].every((l) => labels.includes(l)), JSON.stringify(labels));
   check('LP.9', 'form button label = Get My Free Quote', /<span class="btn-label">Get My Free Quote<\/span>/.test(f));
-  check('LP.10', 'form still posts to the existing endpoint', f.includes('action="/backend/contact.php"') && f.includes('name="csrf_token"') && f.includes('name="website"'));
+  check('LP.10', 'form still posts to the existing endpoint', f.includes('action="/api/contact"') && f.includes('name="csrf_token"') && f.includes('name="website"'));
   check('LP.11', 'service dropdown preselects Book Publishing and is optional', /<option value="book-publishing-services" selected>/.test(f) && !/<select[^>]*name="service"[^>]*required/.test(f));
   const ov = sec(LP, 'lp-over');
   check('LP.12', 'overview: eyebrow, heading, both paragraphs', txt((ov.match(/<p class="kicker">([\s\S]*?)<\/p>/) || [])[1] || '').toUpperCase() === 'OVERVIEW' && txt((ov.match(/<h2>([\s\S]*?)<\/h2>/) || [])[1] || '') === 'What This Service Covers' && txt(ov).includes('A book involves several stages, from reviewing the manuscript to preparing the final files for publication. Our services provide support with the parts of the process you choose.') && txt(ov).includes('Whether you need help with editing, cover design, formatting or publishing preparation, we can discuss your requirements and identify the services that suit your project.'));

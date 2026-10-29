@@ -24,7 +24,7 @@ for (const f of files) {
     list.push(where);
 
     if (!String(fa.class || '').includes('lead-form')) bad('form is not a .lead-form, so the shared validation/submit handler is NOT attached');
-    if (fa.method !== 'post' || fa.action !== '/backend/contact.php') bad(`unexpected method/action ${fa.method} ${fa.action}`);
+    if (fa.method !== 'post' || fa.action !== '/api/contact') bad(`unexpected method/action ${fa.method} ${fa.action}`);
     for (const n of REQUIRED) {
       const c = byName(n);
       if (!c) { bad(`missing field "${n}"`); continue; }

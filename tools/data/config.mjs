@@ -11,8 +11,8 @@ export const site = {
   legalUpdated: 'October 28, 2026', // date legal pages were last materially revised; update when content changes
   hours: '',   // not supplied
   social: { facebook: '', instagram: '', linkedin: '', x: '', youtube: '' }, // add URLs to show icons
-  formEndpoint: '/backend/contact.php',
-  tokenEndpoint: '/backend/token.php',
+  formEndpoint: '/api/contact',
+  tokenEndpoint: '/api/token',
   disclaimer:
     'amazonselfpublishers is an independent publishing-services provider. We are not owned by, endorsed by, or officially affiliated with Amazon, Kindle Direct Publishing, or any of their subsidiaries. Amazon and Kindle are trademarks of their respective owners. Authors can publish on Amazon KDP directly and free of charge; we charge only for the optional services they choose.',
 };

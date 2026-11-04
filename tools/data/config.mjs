@@ -8,7 +8,7 @@ export const site = {
   email: 'info@amazonselfpublishers.co', // shown publicly; form recipient is set separately in backend/.env
   legalName: '', // OWNER INPUT NEEDED: exact legal entity name (e.g. "Example Publishing LLC"). Shown in footer/contact/legal pages once set.
   address: 'Fine Arts Building, 811 W. 7th St., Suite 1149, Los Angeles, CA 90017', // supplied by owner 2026-10-18; shown in footer, contact and legal pages
-  legalUpdated: 'October 28, 2026', // date legal pages were last materially revised; update when content changes
+  legalUpdated: 'November 4, 2026', // date legal pages were last materially revised; update when content changes
   hours: '',   // not supplied
   social: { facebook: '', instagram: '', linkedin: '', x: '', youtube: '' }, // add URLs to show icons
   formEndpoint: '/api/contact',

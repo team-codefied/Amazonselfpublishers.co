@@ -154,6 +154,8 @@ ${noindex ? '<meta name="robots" content="noindex">' : ''}
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="/assets/css/styles.css?v=${ver('assets/css/styles.css')}">
 ${ldAll}
+<!-- Microsoft Advertising UET tag -->
+<script>(function(w, d, t, u, o) {w[u] = w[u] || [], o.ts = (new Date).getTime();var n = d.createElement(t);n.src = "https://bat.bing.net/bat.js?ti=" + o.ti + ("uetq" != u ? "&q=" + u : ""),n.async = 1, n.onload = n.onreadystatechange = function() {var s = this.readyState;s && "loaded" !== s && "complete" !== s ||(o.q = w[u], w[u] = new UET(o), w[u].push("pageLoad"),n.onload = n.onreadystatechange = null)};var i = d.getElementsByTagName(t)[0];i.parentNode.insertBefore(n, i);})(window, document, "script", "uetq", {ti: "247023693",enableAutoSpaTracking: true});</script>
 </head><body class="${landing ? 'is-landing' : ''}">
 ${header(path)}
 <main id="main">${body}</main>
@@ -460,7 +462,7 @@ Header always set X-Frame-Options "SAMEORIGIN"
 Header always set Referrer-Policy "strict-origin-when-cross-origin"
 Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
 Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains" env=HTTPS
-Header always set Content-Security-Policy "default-src 'self'; img-src 'self' data: https://*.livechatinc.com https://*.livechat.com https://*.livechat-files.com; style-src 'self' https://fonts.googleapis.com https://*.livechatinc.com 'unsafe-inline'; font-src 'self' data: https://fonts.gstatic.com https://*.livechatinc.com; script-src 'self' 'unsafe-inline' https://*.livechatinc.com https://*.livechat.com; connect-src 'self' https://*.livechatinc.com https://*.livechat.com wss://*.livechatinc.com wss://*.livechat.com; frame-src https://*.livechatinc.com https://*.livechat.com; media-src https://*.livechatinc.com https://*.livechat-files.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self'"
+Header always set Content-Security-Policy "default-src 'self'; img-src 'self' data: https://bat.bing.com https://bat.bing.net https://*.livechatinc.com https://*.livechat.com https://*.livechat-files.com; style-src 'self' https://fonts.googleapis.com https://*.livechatinc.com 'unsafe-inline'; font-src 'self' data: https://fonts.gstatic.com https://*.livechatinc.com; script-src 'self' 'unsafe-inline' https://bat.bing.com https://bat.bing.net https://*.livechatinc.com https://*.livechat.com; connect-src 'self' https://bat.bing.com https://bat.bing.net https://*.livechatinc.com https://*.livechat.com wss://*.livechatinc.com wss://*.livechat.com; frame-src https://*.livechatinc.com https://*.livechat.com; media-src https://*.livechatinc.com https://*.livechat-files.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self'"
 </IfModule>
 
 <IfModule mod_expires.c>

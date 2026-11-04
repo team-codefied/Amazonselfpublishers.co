@@ -36,24 +36,25 @@ export const privacy = {
       'You can ask us to stop contacting you at any time by emailing ' + email + ' or telling us during a call.',
     ] },
     { h: 'Cookies and similar technologies', p: [
-      'The website itself does not set advertising or analytics cookies. It uses your browser\'s session storage to hold campaign parameters until you close the tab (see above).',
+      'The website uses your browser\'s session storage to hold campaign parameters until you close the tab (see above). It also loads the Microsoft Advertising Universal Event Tracking (UET) tag, which may set cookies or use similar technologies, as described under "Advertising and analytics" below.',
       'The live chat widget on this website is provided by LiveChat (LiveChat Software). When it loads, it may set cookies or use local storage to recognise your browser, keep a chat conversation going and record visit details such as pages viewed, approximate location, device and browser information. Its use of your information is described in the provider\'s own privacy policy.',
       'Page fonts are loaded from Google Fonts, so your browser sends a request, including your IP address, to Google to download them.',
       'You can block or delete cookies and local storage in your browser settings. Blocking them may stop the chat widget from working correctly.',
     ] },
     { h: 'Advertising and analytics', p: [
-      'As of the date at the top of this page, this website does not use Microsoft Advertising (UET) tags, Google Analytics, Google Ads conversion tags, Meta Pixel or any other analytics or advertising pixel.',
+      'This website uses the Microsoft Advertising Universal Event Tracking (UET) tag, provided by Microsoft. The tag records visits and actions on this website, such as pages viewed and form submissions, together with technical information such as your IP address, browser and device details and the page that referred you. We use it to measure how our Microsoft Advertising campaigns perform (for example, which ads lead to an inquiry) and to improve those campaigns; Microsoft may also use this information to show you relevant ads. The tag may set cookies or use similar technologies, and Microsoft handles this information under its own privacy statement. As of the date at the top of this page, the website does not use Google Analytics, Google Ads conversion tags, Meta Pixel or any other analytics or advertising pixel.',
       'We may advertise our services through online ad platforms. When you click one of our ads, the platform may add campaign parameters to the page address. We record those parameters with your inquiry (see above) so we can tell which campaign led to it.',
-      'Before we install any advertising or analytics tag, we will update this policy to name the tool, explain what it is used for and what cookies or similar technologies it uses, and describe the choices available to you.',
+      'You can block or delete cookies in your browser settings, use your browser\'s privacy controls or a global opt-out signal such as Global Privacy Control, or manage personalised advertising through the privacy settings Microsoft provides. Before we install any other advertising or analytics tag, we will update this policy to name the tool, explain what it is used for and what cookies or similar technologies it uses, and describe the choices available to you.',
     ] },
     { h: 'How we share information', p: ['We share personal information only as needed to run the website and provide our services:'], ul: [
       'Website hosting and infrastructure providers, which store and serve the website and process server logs.',
       'Email service providers, which transmit and store the inquiry emails we send and receive (we send inquiry notifications through our business email account).',
       'LiveChat, which provides the chat widget and stores chat conversations.',
       'Google, which serves the website\'s fonts.',
+      'Microsoft, which provides the Microsoft Advertising UET tag used to measure our ad campaigns.',
       'The editors, designers, writers or other specialists who work on a project you ask us to deliver, to the extent needed to perform that work.',
       'Professional advisers, authorities or a successor business, where required by law or in connection with a business transfer.',
-    ], after: 'We do not sell personal information collected through this website, and we do not share it for cross-context behavioural advertising.' },
+    ], after: 'We do not sell personal information collected through this website for money. The Microsoft Advertising UET tag sends visit and device information to Microsoft for advertising measurement, which some laws treat as "sharing" for cross-context behavioural advertising; see "Advertising and analytics" and "California residents" for your choices.' },
     { h: 'How long we keep information', p: [
       'We keep inquiry information (including the inquiry email) for as long as needed to respond to you and, if you become a client, to deliver and document the services. We then keep it for a reasonable period for business records before it is deleted, unless we are required to keep it longer by law. You can ask us to delete your inquiry information earlier (see "Your privacy rights and choices").',
       'Chat transcripts are retained under the chat provider\'s own retention settings. Anti-spam records (hashed IP and timestamps) are used only for short-term rate limiting.',
@@ -65,7 +66,7 @@ export const privacy = {
     { h: 'California residents (CCPA/CPRA)', p: [
       'If you are a California resident, you may have the right to know what personal information we collect, use, disclose and sell or share; to request deletion or correction; to opt out of the sale or sharing of personal information; and to be free from discrimination for exercising these rights.',
       'In the last twelve months we have collected the categories of personal information described in "Information we collect" (identifiers such as name, email address, phone number and IP address; information you provide about your project; and internet or network activity such as pages viewed and referral details) for the purposes described in "How we use information".',
-      'We do not sell personal information collected through this website. Because the website does not currently use advertising or analytics tags, we do not currently "share" personal information for cross-context behavioural advertising. If that changes, we will update this policy before the change. To make a request, or to opt out of any sale or sharing, email ' + email + ' with the subject "Do Not Share" or "Privacy Request", or call ' + phone + '. You may also use an authorised agent to submit a request on your behalf.',
+      'We do not sell personal information collected through this website. Because the website uses the Microsoft Advertising UET tag, which sends identifiers, internet activity and device information to Microsoft for advertising measurement, that disclosure may be treated as "sharing" for cross-context behavioural advertising. To make a request, or to opt out of any sale or sharing, email ' + email + ' with the subject "Do Not Share" or "Privacy Request", or call ' + phone + '. You may also use an authorised agent to submit a request on your behalf.',
     ] },
     { h: 'Residents of other states', p: [
       `Residents of some other U.S. states have similar privacy rights. You may use the contact methods above to make a request, and we will handle it in line with the law that applies to you.`,

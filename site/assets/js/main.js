@@ -119,7 +119,9 @@
         .then(function (j) {
           if (j.ok) {
             status.className = 'form-status ok'; status.textContent = j.message || 'Thank you. We have received your inquiry and will be in touch shortly.';
-            form.reset(); fillHidden(form); refreshToken(); label.textContent = 'Sent'; setTimeout(function () { btn.disabled = false; label.textContent = orig; }, 6000);
+            form.reset(); label.textContent = 'Sent';
+            location.assign('/thank-you'); // every form ends on the thank-you page
+            setTimeout(function () { fillHidden(form); refreshToken(); btn.disabled = false; label.textContent = orig; }, 6000); // only runs if the redirect is blocked
           } else {
             if (j.errors) Object.keys(j.errors).forEach(function (k) { if (form.elements[k]) setErr(form.elements[k], j.errors[k]); });
             status.className = 'form-status bad'; status.textContent = j.message || 'Sorry, something went wrong. Please try again or call ' + window.SITE.phone + '.';

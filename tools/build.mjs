@@ -367,9 +367,57 @@ function legal() {
   mk('/terms-and-conditions', terms);
 }
 
+function thankYou() {
+  const cards = services.slice(0, 8).map((r) => `<li><a href="${A(r)}"><span class="n">${num(services.indexOf(r))}</span><strong>${esc(r.menu)}</strong><span>${esc(r.kicker)}</span>${ICON.arrow}</a></li>`).join('');
+  const body = `<section class="page-hero"><div class="container"><p class="kicker light">Request received</p><h1>Thank you. We have your inquiry.</h1><p class="lede">A member of our team will contact you shortly using the details you gave us. If your project is urgent, call us on ${site.phone}.</p><div class="hero-actions"><a class="btn btn-gold" href="/">Back to home ${ICON.arrow}</a><a class="btn btn-ghost" href="${site.phoneHref}">${ICON.phone}${site.phone}</a></div></div></section><section class="sec"><div class="container"><div class="sec-head"><p class="kicker">While you wait</p><h2>Explore our services</h2></div><ul class="rel">${cards}</ul></div></section>`;
+  write('/thank-you', layout({ path: '/thank-you', title: 'Thank you | amazonselfpublishers', desc: 'Thank you for contacting amazonselfpublishers. We have received your inquiry.', body, noindex: true }));
+}
+
 function notFound() {
   const body = `<section class="page-hero"><div class="container"><p class="kicker light">Error 404</p><h1>We could not find that page</h1><p class="lede">The page may have moved. Try the links below or call us.</p><div class="hero-actions"><a class="btn btn-gold" href="/">Back to home ${ICON.arrow}</a><a class="btn btn-ghost" href="${site.phoneHref}">${ICON.phone}${site.phone}</a></div></div></section><section class="sec"><div class="container"><ul class="rel">${services.slice(0, 8).map((r) => `<li><a href="${A(r)}"><span class="n">${num(services.indexOf(r))}</span><strong>${esc(r.menu)}</strong><span>${esc(r.kicker)}</span>${ICON.arrow}</a></li>`).join('')}</ul></div></section>`;
   write('/404', layout({ path: '/404', title: 'Page not found | amazonselfpublishers', desc: 'The page you requested could not be found.', body, noindex: true }));
+}
+
+/** llms.txt (index) and llms-full.txt (full text) for AI assistants; built from the same data as the pages so they cannot drift. */
+function llmsFiles() {
+  const summary = `${site.displayName} (${site.domain.replace('https://', '')}) is an independent publishing-services company. It offers book publishing, Amazon KDP publishing support, editing, cover design, formatting, ghostwriting, marketing and related services to authors. It is not affiliated with or endorsed by Amazon; authors can publish on Amazon KDP directly and free of charge, and ${site.displayName} charges only for the optional services an author chooses.`;
+  const contactLines = [`- Website: ${site.domain}/`, `- Phone: ${site.phone}`, `- Email: ${site.email}`, `- Address: ${site.address}`, `- Contact form: ${site.domain}/contact-us`];
+  const svcLine = (s) => `- [${s.menu}](${site.domain}${A(s)}): ${s.metaDesc}`;
+  const index = [
+    `# ${site.displayName}`, '', `> ${summary}`, '',
+    '## Services', ...services.map(svcLine), '',
+    '## Company', `- [About us](${site.domain}/about-us): Who we are and how we work.`, `- [Portfolio](${site.domain}/our-portfolio): Examples of our work.`, `- [Client testimonials](${site.domain}/client-testimonials): What authors say about working with us.`, `- [Contact us](${site.domain}/contact-us): Request a quote by form or phone.`, '',
+    '## Articles', ...blogPosts.map((p) => `- [${p.title}](${site.domain}/articles/${p.slug}): ${p.excerpt}`), '',
+    '## Policies', `- [Privacy Policy](${site.domain}/privacy-policy)`, `- [Terms and Conditions](${site.domain}/terms-and-conditions)`, '',
+    '## Contact', ...contactLines, '',
+    '## Optional', `- [Full text of this site for language models](${site.domain}/llms-full.txt)`, `- [Sitemap](${site.domain}/sitemap.xml)`, '',
+  ].join('\n');
+  writeFileSync(join(OUT, 'llms.txt'), index);
+
+  const list = (arr) => arr.map((x) => `- ${x}`).join('\n');
+  const pairs = (arr) => arr.map(([t, d]) => `- ${t}: ${d}`).join('\n');
+  const full = [
+    `# ${site.displayName}`, '', `> ${summary}`, '',
+    `This file contains the main text of ${site.domain}/ for language models. Page URLs are given so answers can link to the source.`, '',
+    '## Contact', ...contactLines, '',
+    '## Important disclosure', site.disclaimer, '',
+    '## How it works', pairs(processSteps), '',
+    '## Frequently asked questions', ...homeFaqs.map(([q, a]) => `### ${q}\n${a}\n`),
+    '# Services', '',
+    ...services.map((s) => [
+      `## ${s.menu}`, `URL: ${site.domain}${A(s)}`, '', `**${s.h1}**`, '', s.lede, '',
+      ...(s.overview || []).flatMap((p) => [p, '']),
+      ...(s.audience && s.audience.length ? ['Who it is for:', list(s.audience), ''] : []),
+      ...(s.deliverables && s.deliverables.length ? ['What is included:', pairs(s.deliverables), ''] : []),
+      ...(s.process && s.process.length ? ['Process:', pairs(s.process), ''] : []),
+      ...(s.benefits && s.benefits.length ? ['Benefits:', list(s.benefits), ''] : []),
+      ...(s.faqs && s.faqs.length ? ['Questions:', ...s.faqs.map(([q, a]) => `Q: ${q}\nA: ${a}\n`)] : []),
+    ].join('\n')),
+    '# Articles', '',
+    ...blogPosts.map((p) => `## ${p.title}\nURL: ${site.domain}/articles/${p.slug}\n\n${p.excerpt}\n`),
+    '', `Pricing is not published on the site; quotes are provided after the author shares their project details through ${site.domain}/contact-us or by phone at ${site.phone}.`, '',
+  ].join('\n');
+  writeFileSync(join(OUT, 'llms-full.txt'), full);
 }
 
 function seoFiles() {
@@ -377,6 +425,7 @@ function seoFiles() {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pages.map((p) => `<url><loc>${url(p)}</loc><lastmod>${today}</lastmod></url>`).join('\n')}\n</urlset>\n`;
   writeFileSync(join(OUT, 'sitemap.xml'), xml);
   writeFileSync(join(OUT, 'robots.txt'), `User-agent: *\nAllow: /\nDisallow: /backend/\n\nSitemap: ${site.domain}/sitemap.xml\n`);
+  llmsFiles();
   // service slug -> label map for server-side form validation
   mkdirSync(join(OUT, 'backend'), { recursive: true });
   writeFileSync(join(OUT, 'backend', 'services.json'), JSON.stringify(Object.fromEntries(services.map((s) => [s.slug, s.menu])), null, 2));
@@ -431,5 +480,5 @@ AddOutputFilterByType DEFLATE text/html text/css application/javascript applicat
 /* ---------- run ---------- */
 home();
 services.forEach((s) => (s.landing ? landing(s) : servicePage(s)));
-portfolio(); testimonialsPage(); about(); blogIndex(); contact(); legal(); notFound(); seoFiles();
+portfolio(); testimonialsPage(); about(); blogIndex(); contact(); legal(); thankYou(); notFound(); seoFiles();
 console.log(`Built ${pages.length} indexable pages -> ${OUT}`);

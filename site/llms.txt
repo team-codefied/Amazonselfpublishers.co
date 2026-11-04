@@ -1,0 +1,53 @@
+# Amazon Self Publishers
+
+> Amazon Self Publishers (amazonselfpublishers.co) is an independent publishing-services company. It offers book publishing, Amazon KDP publishing support, editing, cover design, formatting, ghostwriting, marketing and related services to authors. It is not affiliated with or endorsed by Amazon; authors can publish on Amazon KDP directly and free of charge, and Amazon Self Publishers charges only for the optional services an author chooses.
+
+## Services
+- [Book Publishing](https://amazonselfpublishers.co/publishing-services): Book publishing help for independent authors: editing coordination, cover and interior design, formatting and publishing support. Choose only the services you need.
+- [Amazon Publishing Support](https://amazonselfpublishers.co/amazon-publishing-services): Get help publishing your book on Amazon: account guidance, formatting, cover files, listing optimization and launch support from an independent publishing team.
+- [Book Marketing](https://amazonselfpublishers.co/book-marketing-services): Practical book marketing plans for independent authors: positioning, author platform, launch planning, content and reader outreach, without unrealistic promises.
+- [Ebook Writing](https://amazonselfpublishers.co/ebook-writing-services): Professional ebook writers for non-fiction guides, lead magnets and Kindle titles. Original content, researched structure and revisions included in scope.
+- [Ebook Publishing](https://amazonselfpublishers.co/ebook-publishing-services): Convert and publish your ebook: reflowable EPUB and Kindle-ready files, metadata, cover specs and distribution guidance for major ebook stores.
+- [Audiobook](https://amazonselfpublishers.co/audio-book-services): Audiobook production for independent authors: narrator selection, recording, editing, mastering and files prepared to retailer technical standards.
+- [SEO Optimized Content](https://amazonselfpublishers.co/seo-optimized-content-services): Search-focused content for authors and publishing brands: keyword research, topic planning and original pages and articles written for readers first.
+- [Article Writing](https://amazonselfpublishers.co/article-writing): Original, researched article writing for websites, magazines, newsletters and thought leadership, delivered to your brief and edited before delivery.
+- [Book Formatting](https://amazonselfpublishers.co/book-formatting): Professional interior formatting for print and ebook: trim size, margins, typography, chapter styling and files ready for upload.
+- [Book Video Trailer](https://amazonselfpublishers.co/book-trailer): Cinematic book trailers for authors: script, visuals, music licensing and cuts for social media, your website and retailer pages.
+- [Book Illustrations](https://amazonselfpublishers.co/book-illustrations-designing-services): Custom illustrations for children's books, graphic novels, fantasy maps and non-fiction: character design, interior art and print-ready files.
+- [Book Cover Design](https://amazonselfpublishers.co/book-cover-designing-services): Genre-aware book cover design: front cover, full wrap for print, ebook cover and social previews, with concept and revision rounds.
+- [Book Printing](https://amazonselfpublishers.co/book-printing-services): Print-ready files, paper and binding choices, proof copies and print-on-demand or short-run printing guidance for independent authors.
+- [Copywriting](https://amazonselfpublishers.co/copy-writing-services): Persuasive copywriting: book descriptions, author bios, sales pages, email sequences and ad copy written to convert, honestly.
+- [Ghostwriting](https://amazonselfpublishers.co/ghost-writing-services): Confidential ghostwriting for memoirs, non-fiction and fiction. Work with an experienced writer, keep your byline and own the finished manuscript.
+- [Book Editing & Proofreading](https://amazonselfpublishers.co/book-editing-proofreading-services): Developmental editing, copyediting and proofreading explained and delivered by experienced editors, so your manuscript is clear, consistent and error-free.
+- [Author Website](https://amazonselfpublishers.co/author-website-development-services): Author websites built to showcase your books, collect email subscribers and support launches. Responsive, fast and easy to update.
+- [Blog Writing](https://amazonselfpublishers.co/blog-writing): Consistent, original blog posts for author and business websites: topic planning, researched writing and SEO-friendly structure on a regular schedule.
+- [Book Promotion](https://amazonselfpublishers.co/book-promotion): Book promotion for launch and backlist: reader outreach, newsletter features, social campaigns, review requests and promotional assets.
+
+## Company
+- [About us](https://amazonselfpublishers.co/about-us): Who we are and how we work.
+- [Portfolio](https://amazonselfpublishers.co/our-portfolio): Examples of our work.
+- [Client testimonials](https://amazonselfpublishers.co/client-testimonials): What authors say about working with us.
+- [Contact us](https://amazonselfpublishers.co/contact-us): Request a quote by form or phone.
+
+## Articles
+- [Editing vs. proofreading: which does your manuscript need?](https://amazonselfpublishers.co/articles/editing-vs-proofreading): Developmental editing, copyediting and proofreading solve different problems. Here is how to decide where your draft stands.
+- [How to choose a trim size for your paperback](https://amazonselfpublishers.co/articles/choosing-a-trim-size): Trim size affects page count, cost and reader comfort. A practical look at the common options for fiction and non-fiction.
+- [What makes a good book description?](https://amazonselfpublishers.co/articles/what-makes-a-good-book-description): Your description is a sales page in miniature. Learn how to hook readers in the first lines and set honest expectations.
+- [Ebook vs. print formatting: why one file is not enough](https://amazonselfpublishers.co/articles/ebook-vs-print-formatting): Print pages are fixed, while ebooks reflow. Understanding the difference helps you avoid broken layouts and rejected uploads.
+- [Planning a book launch: a simple timeline](https://amazonselfpublishers.co/articles/planning-a-book-launch): A sensible launch starts weeks before release. Use this timeline to organise your proof copies, outreach and announcements.
+- [Do you need an author website?](https://amazonselfpublishers.co/articles/do-you-need-an-author-website): Social profiles come and go. Here is why a website you own is still the foundation of an author platform.
+
+## Policies
+- [Privacy Policy](https://amazonselfpublishers.co/privacy-policy)
+- [Terms and Conditions](https://amazonselfpublishers.co/terms-and-conditions)
+
+## Contact
+- Website: https://amazonselfpublishers.co/
+- Phone: +1 323 509 3062
+- Email: info@amazonselfpublishers.co
+- Address: Fine Arts Building, 811 W. 7th St., Suite 1149, Los Angeles, CA 90017
+- Contact form: https://amazonselfpublishers.co/contact-us
+
+## Optional
+- [Full text of this site for language models](https://amazonselfpublishers.co/llms-full.txt)
+- [Sitemap](https://amazonselfpublishers.co/sitemap.xml)

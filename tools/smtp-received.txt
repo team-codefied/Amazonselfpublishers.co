@@ -29,3 +29,34 @@ Received: 2026-10-29T14:46:00.091Z
 .
 
 =====
+DATA
+From: amazonselfpublishers website <s@test.local>
+To: o@test.local
+Reply-To: Test User <t@example.com>
+Subject: New inquiry: Not specified (Test User)
+Message-ID: <05dffa16-3bb4-2248-ac38-5c5aafe9635d@test.local>
+Content-Transfer-Encoding: 7bit
+Date: Wed, 04 Nov 2026 17:26:53 +0000
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+New website inquiry
+----------------------------------------
+Name: Test User
+Email: t@example.com
+Phone: +1 323 509 3062
+Service: Not specified
+Book title: -
+Manuscript status: -
+
+Message:
+-
+
+----------------------------------------
+Privacy and terms acknowledged: ticked
+Form: contact-page
+Page: /contact-us
+Received: 2026-11-04T17:26:53.960Z
+.
+
+=====

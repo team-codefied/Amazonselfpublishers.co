@@ -7,7 +7,8 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/book-publishing-services", "destination": "/publishing-services", "permanent": true }
+    { "source": "/book-publishing-services", "destination": "/publishing-services", "permanent": true },
+    { "source": "/our-portfolio", "destination": "/", "permanent": true }
   ],
   "rewrites": [
     { "source": "/backend/token.php", "destination": "/api/token" },

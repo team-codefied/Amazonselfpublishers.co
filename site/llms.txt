@@ -25,7 +25,6 @@
 
 ## Company
 - [About us](https://amazonselfpublishers.co/about-us): Who we are and how we work.
-- [Portfolio](https://amazonselfpublishers.co/our-portfolio): Examples of our work.
 - [Client testimonials](https://amazonselfpublishers.co/client-testimonials): What authors say about working with us.
 - [Contact us](https://amazonselfpublishers.co/contact-us): Request a quote by form or phone.
 

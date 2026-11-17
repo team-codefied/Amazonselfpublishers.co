@@ -116,7 +116,7 @@ function footer() {
 ${site.legalName ? `<p class="ft-legal"><strong>${esc(site.legalName)}</strong></p>` : ''}<a class="ft-phone" href="${site.phoneHref}">${ICON.phone}${site.phone}</a>${site.email ? `<a class="ft-mail" href="mailto:${esc(site.email)}">${esc(site.email)}</a>` : ''}${site.address ? `<address>${esc(site.address)}</address>` : ''}${site.hours ? `<p class="small">${esc(site.hours)}</p>` : ''}</div>
 <div><h2 class="ft-h">Services</h2><ul class="ft-list two">${svcs.slice(0, half).join('')}</ul></div>
 <div><h2 class="ft-h">&nbsp;</h2><ul class="ft-list two">${svcs.slice(half).join('')}</ul></div>
-<div><h2 class="ft-h">Company</h2><ul class="ft-list"><li><a href="/">Home</a></li><li><a href="/our-portfolio">Portfolio</a></li><li><a href="/client-testimonials">Testimonials</a></li><li><a href="/about-us">About Us</a></li><li><a href="/blog">Blog</a></li><li><a href="/contact-us">Contact Us</a></li></ul>${soc ? `<h2 class="ft-h sp">Follow</h2><ul class="ft-list">${soc}</ul>` : ''}</div></div>
+<div><h2 class="ft-h">Company</h2><ul class="ft-list"><li><a href="/">Home</a></li><li><a href="/client-testimonials">Testimonials</a></li><li><a href="/about-us">About Us</a></li><li><a href="/blog">Blog</a></li><li><a href="/contact-us">Contact Us</a></li></ul>${soc ? `<h2 class="ft-h sp">Follow</h2><ul class="ft-list">${soc}</ul>` : ''}</div></div>
 <p class="disclaimer">${esc(site.disclaimer)}</p>
 <div class="ft-bot"><nav class="ft-policy" aria-label="Legal"><a href="/privacy-policy">Privacy Policy</a><span aria-hidden="true">&middot;</span><a href="/terms-and-conditions">Terms and Conditions</a></nav><p class="ft-copy">&copy; <span id="yr">2026</span> ${site.name}. All rights reserved.</p></div></div></footer>`;
 }
@@ -225,7 +225,7 @@ function home() {
 <div class="stage-cols">${groups.map(([g, list], gi) => `<div class="stage-col"><p class="stage-tag"><span>${gi + 1}</span>${g}</p><ul>${list.map((sl) => { const s = bySlug[sl]; return `<li><a href="${A(s)}"><span class="sc-n">${num(svcIdx(sl))}</span><span class="sc-t">${esc(s.menu)}</span>${ICON.arrow}</a></li>`; }).join('')}</ul></div>`).join('')}</div>
 <div class="center"><button class="btn btn-dark" type="button" data-quote>Not sure what you need? Ask us ${ICON.arrow}</button></div></div></section>
 <section class="sec journey dark" id="process"><div class="container"><div class="sec-head"><p class="kicker light">The author journey</p><h2>Five steps from manuscript to market</h2></div><ol class="steps">${processSteps.map(([t, d], i) => `<li><span class="sn">${num(i)}</span><h3>${esc(t)}</h3><p>${esc(d)}</p></li>`).join('')}</ol></div></section>
-<section class="sec showcase stage"><div class="container"><div class="sec-head split"><div><p class="kicker">Cover gallery</p><h2>Sample covers across genres</h2></div><p>Sample covers that show the range of styles authors choose. They are samples only, not client projects.</p></div><ul class="shelf big">${books.map((b) => `<li><figure class="shelf-item">${bookImg(b)}${capOf(b, true)}</figure></li>`).join('')}</ul><div class="center"><a class="btn btn-dark" href="/our-portfolio">See our work ${ICON.arrow}</a></div></div></section>
+<section class="sec showcase stage"><div class="container"><div class="sec-head split"><div><p class="kicker">Cover gallery</p><h2>Sample covers across genres</h2></div><p>Sample covers that show the range of styles authors choose. They are samples only, not client projects.</p></div><ul class="shelf big">${books.map((b) => `<li><figure class="shelf-item">${bookImg(b)}${capOf(b, true)}</figure></li>`).join('')}</ul></div></section>
 <section class="sec editorial"><div class="container ed-grid"><div class="ed-media"><div class="ed-card c1"><span>01</span><p>Rights stay with the author</p></div><div class="ed-card c2"><span>02</span><p>Specialists, one coordinator</p></div></div>
 <div class="ed-text"><p class="kicker">Why authors choose us</p><h2>You bring the book. We bring the production team.</h2><p>Publishing a book well takes editors, designers, formatters and people who understand how retailers work. Finding and managing each of them yourself is a project in its own right.</p><p>We put those specialists behind a single point of contact. You make the creative decisions; we make sure they are carried out properly, in the right order, with nothing left to chance.</p><ul class="ticks"><li>${ICON.check}Plain-language guidance at each decision</li><li>${ICON.check}Scope and next steps explained before work begins</li><li>${ICON.check}Honest advice, including when a service is not needed</li></ul><a class="link-arrow" href="/about-us">About amazonselfpublishers ${ICON.arrow}</a></div></div></section>
 <section class="sec resources cream"><div class="container"><div class="sec-head split"><div><p class="kicker">Author resources</p><h2>Practical reading before you publish</h2></div><a class="link-arrow" href="/blog">All articles ${ICON.arrow}</a></div><div class="posts">${blogPosts.slice(0, 3).map((p, i) => postCard(p, i)).join('')}</div></div></section>
@@ -293,21 +293,11 @@ function simpleHero(c, kicker, h1, lede) {
   return `<section class="page-hero"><div class="container">${c.html}<p class="kicker light">${kicker}</p><h1>${h1}</h1><p class="lede">${lede}</p></div></section>`;
 }
 
-function portfolio() {
-  const c = crumbs([{ label: 'Home', href: '/' }, { label: 'Portfolio', href: '/our-portfolio' }]);
-  // Fix List C03: no third-party books here. Honest placeholder until real, author-approved client projects exist.
-  const body = `${simpleHero(c, 'OUR PORTFOLIO', 'Our Work', 'Client projects will appear here once they are complete and the author has approved sharing them. Ask us for sample edits, cover concepts and formatting examples.')}
-<section class="sec"><div class="container narrow"><div class="notice"><h2>Client projects are coming soon</h2><p>We only show work that is genuinely ours and that the author has approved for sharing. Until then, we are happy to show you what we can do for your own book: sample edits, cover concepts and formatting examples.</p><div class="hero-actions"><a class="btn btn-dark" href="/#services">Explore Our Services ${ICON.arrow}</a> <button class="btn btn-gold" type="button" data-quote>Bring Your Book to Life ${ICON.arrow}</button></div></div></div></section>
-${ctaBand({ title: 'Ready to talk about your book?', text: 'Tell us about your manuscript and we will recommend a path to publication.', id: 'pf-form' })}`;
-  write('/our-portfolio', layout({ path: '/our-portfolio', title: 'Our Work | amazonselfpublishers', desc: 'Client projects will appear here once they are complete and the author has approved sharing them. Ask us for sample edits, cover concepts and formatting examples.', body, ld: [c.ld] }));
-  pages.push('/our-portfolio');
-}
-
 function testimonialsPage() {
   const c = crumbs([{ label: 'Home', href: '/' }, { label: 'Testimonials', href: '/client-testimonials' }]);
   const has = testimonials.length > 0;
   const body = `${simpleHero(c, 'Testimonials', 'What authors say about working with us', 'We only publish feedback that comes from real clients who have given permission.')}
-<section class="sec"><div class="container narrow">${has ? `<div class="quotes">${testimonials.map((t) => `<blockquote><p>${esc(t.quote)}</p><footer>${esc(t.name)}</footer></blockquote>`).join('')}</div>` : `<div class="notice"><h2>Client feedback is being collected</h2><p>We do not display invented or unverified reviews. Authentic, authorised client testimonials will appear here as they are received.</p><p>In the meantime, you are welcome to ask us any question about our process, see the titles in our <a href="/our-portfolio">portfolio</a>, or speak to us directly on <a href="${site.phoneHref}">${site.phone}</a>.</p></div>`}</div></section>
+<section class="sec"><div class="container narrow">${has ? `<div class="quotes">${testimonials.map((t) => `<blockquote><p>${esc(t.quote)}</p><footer>${esc(t.name)}</footer></blockquote>`).join('')}</div>` : `<div class="notice"><h2>Client feedback is being collected</h2><p>We do not display invented or unverified reviews. Authentic, authorised client testimonials will appear here as they are received.</p><p>In the meantime, you are welcome to ask us any question about our process or speak to us directly on <a href="${site.phoneHref}">${site.phone}</a>.</p></div>`}</div></section>
 ${ctaBand({ title: 'Start a conversation', text: 'Ask us anything about your book. There is no obligation.', id: 'tm-form' })}`;
   write('/client-testimonials', layout({ path: '/client-testimonials', title: 'Client Testimonials | amazonselfpublishers', desc: 'Read authorised feedback from authors who have worked with amazonselfpublishers, or contact us to discuss your project.', body, ld: [c.ld] }));
   pages.push('/client-testimonials');
@@ -388,7 +378,7 @@ function llmsFiles() {
   const index = [
     `# ${site.displayName}`, '', `> ${summary}`, '',
     '## Services', ...services.map(svcLine), '',
-    '## Company', `- [About us](${site.domain}/about-us): Who we are and how we work.`, `- [Portfolio](${site.domain}/our-portfolio): Examples of our work.`, `- [Client testimonials](${site.domain}/client-testimonials): What authors say about working with us.`, `- [Contact us](${site.domain}/contact-us): Request a quote by form or phone.`, '',
+    '## Company', `- [About us](${site.domain}/about-us): Who we are and how we work.`, `- [Client testimonials](${site.domain}/client-testimonials): What authors say about working with us.`, `- [Contact us](${site.domain}/contact-us): Request a quote by form or phone.`, '',
     '## Articles', ...blogPosts.map((p) => `- [${p.title}](${site.domain}/articles/${p.slug}): ${p.excerpt}`), '',
     '## Policies', `- [Privacy Policy](${site.domain}/privacy-policy)`, `- [Terms and Conditions](${site.domain}/terms-and-conditions)`, '',
     '## Contact', ...contactLines, '',
@@ -443,6 +433,8 @@ RewriteCond %{HTTP:X-Forwarded-Proto} !https
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 # Old Book Publishing landing path moved (Microsoft Ads fix list H03)
 RewriteRule ^book-publishing-services/?$ /publishing-services [R=301,L]
+# Portfolio page removed
+RewriteRule ^our-portfolio/?$ / [R=301,L]
 # Strip .html from public URLs
 RewriteCond %{THE_REQUEST} \\s/+(.+?)\\.html[\\s?] [NC]
 RewriteRule ^ /%1 [R=301,L,NE]
@@ -482,5 +474,5 @@ AddOutputFilterByType DEFLATE text/html text/css application/javascript applicat
 /* ---------- run ---------- */
 home();
 services.forEach((s) => (s.landing ? landing(s) : servicePage(s)));
-portfolio(); testimonialsPage(); about(); blogIndex(); contact(); legal(); thankYou(); notFound(); seoFiles();
+testimonialsPage(); about(); blogIndex(); contact(); legal(); thankYou(); notFound(); seoFiles();
 console.log(`Built ${pages.length} indexable pages -> ${OUT}`);
